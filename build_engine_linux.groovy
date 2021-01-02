@@ -1,4 +1,4 @@
-pipelineJob('build-engine-linux') {
+pipelineJob('build_engine_linux') {
   definition {
     cpsScm {
       scm {
