@@ -12,6 +12,12 @@ pipelineJob('build_engine_linux') {
             cloneOptions {
               // Perform shallow clone, so that Git will not download history of the project.
               shallow()
+              // Set shallow clone depth, so that git will only download recent history of the project,
+              //  saving time and disk space when you just want to access the latest version of a repository.
+              depth(1)
+              // Do not check out tegs
+              noTags()
+              
             }
             submoduleOptions {
               // Retrieves all submodules recursively.
