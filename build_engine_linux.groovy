@@ -9,6 +9,9 @@ pipelineJob('build_engine_linux') {
           }
           branch('*/main')
           extensions {
+            cloneOptions {
+              shallow()
+            }
             submoduleOptions {
               recursive()
             }
