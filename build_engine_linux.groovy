@@ -10,15 +10,18 @@ pipelineJob('build_engine_linux') {
           branch('*/main')
           extensions {
             cloneOptions {
+              // Perform shallow clone, so that Git will not download history of the project.
               shallow()
             }
             submoduleOptions {
+              // Retrieves all submodules recursively.
               recursive()
             }
           }
         }
       }
       scriptPath('build_engine_linux.groovy')
+      // Obtain the Pipeline script contents directly from the SCM without performing a full checkout.
       lightweight()
     }
   }
