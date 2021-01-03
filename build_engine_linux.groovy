@@ -20,6 +20,8 @@ pipelineJob('build_engine_linux') {
               
             }
             submoduleOptions {
+              // Use credentials from the default remote of the parent project
+              parentCredentials()
               // Retrieves all submodules recursively.
               recursive()
             }
