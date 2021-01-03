@@ -8,6 +8,11 @@ pipelineJob('build_engine_linux') {
             credentials('github-user')
           }
           branch('*/main')
+          extensions {
+            submoduleOptions {
+              recursive()
+            }
+          }
         }
       }
       scriptPath('build_engine_linux.groovy')
