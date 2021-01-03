@@ -10,6 +10,7 @@ pipelineJob('build_engine_linux') {
           branch('*/main')
         }
       }
+      scriptPath('build_engine_linux.groovy')
       lightweight()
     }
   }
