@@ -9,11 +9,11 @@ pipelineJob('build_engine_linux') {
           }
           branch('*/main')
           extensions {
-            submoduleOptions {
+            submoduleOption {
               // Use credentials from the default remote of the parent project
               parentCredentials(true)
               // Retrieves all submodules recursively.
-              recursive(true)
+              recursiveSubmodules(true)
               // Perform shallow clone, so that Git will not download history of the project.
               shallow(true)
               // Set shallow clone depth, so that git will only download recent history of the project,
