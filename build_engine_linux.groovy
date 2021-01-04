@@ -26,8 +26,8 @@ pipelineJob('build_engine_linux') {
               trackingSubmodules(false)
               // No reference path
               reference('')
-              // Timeout
-              timeout(10)
+              // Initial clone of UE repo is allowed to take a long time - it's a large repo!
+              timeout(60)
             }
           }
         }
