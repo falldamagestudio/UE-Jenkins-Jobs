@@ -9,6 +9,9 @@ pipelineJob('build_engine_linux') {
           }
           branch('*/main')
           extensions {
+
+            // We use submoduleOption rather than submoduleOptions, since submoduleOption offers more configurability
+            // Specifically, shallow clonning (with depth = 1) requires using submoduleOption
             submoduleOption {
               // Use credentials from the default remote of the parent project
               parentCredentials(true)
