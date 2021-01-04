@@ -19,6 +19,15 @@ pipelineJob('build_engine_linux') {
               // Set shallow clone depth, so that git will only download recent history of the project,
               //  saving time and disk space when you just want to access the latest version of a repository.
               depth(1)
+
+              // Keep submodule support enabled
+              disableSubmodules(false)
+              // Retrieve exact commit rather than tip of tracking branch in submodules
+              trackingSubmodules(false)
+              // No reference path
+              reference('')
+              // Timeout
+              timeout(10)
             }
           }
         }
