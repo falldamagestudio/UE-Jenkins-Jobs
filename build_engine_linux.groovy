@@ -1,4 +1,7 @@
 pipelineJob('build_engine_linux') {
+  properties {
+    disableConcurrentBuilds()
+  }
   definition {
     cpsScm {
       scm {
