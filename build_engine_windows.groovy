@@ -10,7 +10,7 @@ pipelineJob('build_engine_windows') {
             url('https://github.com/Kalmalyzer/UE-Jenkins-Engine')
             credentials('github-user')
           }
-          branch('*/windows-agents')
+          branch('*/main')
           extensions {
 
             // We use submoduleOption rather than submoduleOptions, since submoduleOption offers more configurability
