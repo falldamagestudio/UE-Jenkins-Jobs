@@ -1,7 +1,11 @@
-pipelineJob('Kubernetes/Build Engine - Win64 - Git - Kubernetes') {
+pipelineJob('kubernetes/build_engine_win64_git_kubernetes') {
+
+  displayName("Build Engine - Win64 - Git - Kubernetes")
+
   properties {
     disableConcurrentBuilds()
   }
+
   definition {
     cpsScm {
       scm {

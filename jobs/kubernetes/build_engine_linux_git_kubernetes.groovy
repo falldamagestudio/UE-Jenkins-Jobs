@@ -1,7 +1,11 @@
-pipelineJob('Build Engine - Linux - Git - Kubernetes') {
+pipelineJob('kubernetes/build_engine_linux_git_kubernetes') {
+
+  displayName("Build Engine - Linux - Git - Kubernetes")
+
   properties {
     disableConcurrentBuilds()
   }
+
   definition {
     cpsScm {
       scm {
