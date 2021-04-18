@@ -1,4 +1,4 @@
-pipelineJob('build_engine_linux') {
+pipelineJob('build_engine_linux_k8s') {
   properties {
     disableConcurrentBuilds()
   }
@@ -10,7 +10,7 @@ pipelineJob('build_engine_linux') {
             url('https://github.com/Kalmalyzer/UE-Jenkins-Engine')
             credentials('github-user')
           }
-          branch('*/main')
+          branch('*/agent-vms')
           extensions {
 
             // We use submoduleOption rather than submoduleOptions, since submoduleOption offers more configurability
@@ -38,7 +38,7 @@ pipelineJob('build_engine_linux') {
           }
         }
       }
-      scriptPath('build_engine_linux.groovy')
+      scriptPath('build_engine_linux_k8s.groovy')
       // Obtain the Pipeline script contents directly from the SCM without performing a full checkout.
       lightweight()
     }
