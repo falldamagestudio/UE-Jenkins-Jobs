@@ -1,4 +1,4 @@
-pipelineJob('build_engine_windows_docker') {
+pipelineJob('Build Engine - Linux - Git - Kubernetes') {
   properties {
     disableConcurrentBuilds()
   }
@@ -38,7 +38,7 @@ pipelineJob('build_engine_windows_docker') {
           }
         }
       }
-      scriptPath('build_engine_windows_docker.groovy')
+      scriptPath('build_engine_linux_git_kubernetes.groovy')
       // Obtain the Pipeline script contents directly from the SCM without performing a full checkout.
       lightweight()
     }

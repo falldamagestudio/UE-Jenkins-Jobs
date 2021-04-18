@@ -1,4 +1,4 @@
-pipelineJob('build_engine_windows_k8s') {
+pipelineJob('Build Engine - Windows - Git - Kubernetes') {
   properties {
     disableConcurrentBuilds()
   }
@@ -38,7 +38,7 @@ pipelineJob('build_engine_windows_k8s') {
           }
         }
       }
-      scriptPath('build_engine_windows_k8s.groovy')
+      scriptPath('build_engine_win64_git_kubernetes.groovy')
       // Obtain the Pipeline script contents directly from the SCM without performing a full checkout.
       lightweight()
     }

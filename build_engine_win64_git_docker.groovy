@@ -1,4 +1,4 @@
-pipelineJob('build_game_windows') {
+pipelineJob('Build Engine - Win64 - Git - Docker') {
   properties {
     disableConcurrentBuilds()
   }
@@ -7,10 +7,10 @@ pipelineJob('build_game_windows') {
       scm {
         git {
           remote {
-            url('https://github.com/Kalmalyzer/UE-Jenkins-Game')
+            url('https://github.com/Kalmalyzer/UE-Jenkins-Engine')
             credentials('github-user')
           }
-          branch('*/main')
+          branch('*/agent-vms')
           extensions {
 
             // We use submoduleOption rather than submoduleOptions, since submoduleOption offers more configurability
@@ -32,13 +32,13 @@ pipelineJob('build_game_windows') {
               trackingSubmodules(false)
               // No reference path
               reference('')
-              // Initial clone of game repo is expected to be reasonably quick
-              timeout(10)
+              // Initial clone of UE repo is allowed to take a long time - it's a large repo!
+              timeout(60)
             }
           }
         }
       }
-      scriptPath('build_game_windows.groovy')
+      scriptPath('build_engine_win64_git_docker.groovy')
       // Obtain the Pipeline script contents directly from the SCM without performing a full checkout.
       lightweight()
     }
