@@ -1,4 +1,4 @@
-pipelineJob('Build Engine - Windows - Git - Kubernetes') {
+pipelineJob('Build Engine - Win64 - Git - Kubernetes') {
   properties {
     disableConcurrentBuilds()
   }
