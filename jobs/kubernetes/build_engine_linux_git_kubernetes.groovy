@@ -14,7 +14,7 @@ pipelineJob('kubernetes/build_engine_linux_git_kubernetes') {
             url('https://github.com/Kalmalyzer/UE-Jenkins-Engine')
             credentials('github-user')
           }
-          branch('*/agent-vms')
+          branch('*/main')
           extensions {
 
             // We use submoduleOption rather than submoduleOptions, since submoduleOption offers more configurability

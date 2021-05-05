@@ -14,7 +14,7 @@ pipelineJob('docker/build_game_win64_git_docker') {
             url('https://github.com/Kalmalyzer/UE-Jenkins-Game')
             credentials('github-user')
           }
-          branch('*/agent-vms')
+          branch('*/main')
         }
       }
       scriptPath('build_game_win64_git_docker.groovy')
