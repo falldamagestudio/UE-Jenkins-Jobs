@@ -18,7 +18,13 @@ pipelineJob('docker/build_game_linux_Plastic_docker') {
 
           // At start of checkout, undo any changed files in the workspace directory and then run a workspace update
           // Reference: https://github.com/jenkinsci/plasticscm-plugin#freestyle-projects
-          cleanup('MINIMAL')
+          cleanup('MINIMAL'
+
+          // Perform single-workspace checkout
+          useMultipleWorkspaces(false)
+
+          // Place checkout result directly into Jenkins' workspace folder
+          directory('')
         }
       }
       scriptPath('build_game_linux_plastic_docker.groovy')
