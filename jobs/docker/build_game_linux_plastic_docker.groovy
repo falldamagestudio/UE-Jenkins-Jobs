@@ -1,4 +1,4 @@
-pipelineJob('docker/build_game_linux_Plastic_docker') {
+pipelineJob('docker/build_game_linux_plastic_docker') {
 
   displayName("Build Game - Linux - Plastic - Docker")
 
