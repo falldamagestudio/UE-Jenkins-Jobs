@@ -1,4 +1,0 @@
-folder("kubernetes") {
-
-    displayName("Kubernetes")
-}

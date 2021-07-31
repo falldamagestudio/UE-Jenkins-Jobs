@@ -1,4 +1,4 @@
-pipelineJob('kubernetes/build_engine_linux_git_kubernetes') {
+pipelineJob('k8s/build_engine_linux_git_kubernetes') {
 
   displayName("Build Engine - Linux - Git - Kubernetes")
 

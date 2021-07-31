@@ -1,4 +1,8 @@
-pipelineJob('kubernetes/build_engine_win64_git_kubernetes') {
+// Choose a short name for this pipeline job
+// The Kubernetes plugin will put the job's workspace at
+// <agent workspace root>/workspace/<job name, including folders>
+// and Windows requires that folder paths be less than 248 chars / file paths be less than 260 chars
+pipelineJob('k8s/b_e_w64_git_k8s') {
 
   displayName("Build Engine - Win64 - Git - Kubernetes")
 
