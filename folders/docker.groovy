@@ -1,4 +1,0 @@
-folder("docker") {
-
-    displayName("Docker")
-}

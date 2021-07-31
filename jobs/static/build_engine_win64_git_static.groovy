@@ -1,6 +1,6 @@
-pipelineJob('docker/build_engine_win64_git_docker') {
+pipelineJob('static/build_engine_win64_git_static') {
 
-  displayName("Build Engine - Win64 - Git - Docker")
+  displayName("Build Engine - Win64 - Git - Static VM")
 
   properties {
     disableConcurrentBuilds()
@@ -42,7 +42,7 @@ pipelineJob('docker/build_engine_win64_git_docker') {
           }
         }
       }
-      scriptPath('Jenkinsfiles/build_engine_win64_git_docker.groovy')
+      scriptPath('Jenkinsfiles/build_engine_win64_git_static.groovy')
       // Obtain the Pipeline script contents directly from the SCM without performing a full checkout.
       lightweight()
     }

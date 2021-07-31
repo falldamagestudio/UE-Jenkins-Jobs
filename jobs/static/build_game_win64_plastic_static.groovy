@@ -1,6 +1,6 @@
-pipelineJob('docker/build_game_linux_plastic_docker') {
+pipelineJob('static/build_game_win64_plastic_static') {
 
-  displayName("Build Game - Linux - Plastic - Docker")
+  displayName("Build Game - Win64 - Plastic - Static VM")
 
   properties {
     disableConcurrentBuilds()
@@ -27,7 +27,7 @@ pipelineJob('docker/build_game_linux_plastic_docker') {
           directory('')
         }
       }
-      scriptPath('build_game_linux_plastic_docker.groovy')
+      scriptPath('build_game_win64_plastic_static.groovy')
       // Obtain the Pipeline script contents directly from the SCM without performing a full checkout.
       lightweight()
     }

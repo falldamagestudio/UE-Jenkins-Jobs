@@ -1,6 +1,6 @@
-pipelineJob('docker/build_game_linux_git_docker') {
+pipelineJob('static/build_game_win64_git_static') {
 
-  displayName("Build Game - Linux - Git - Docker")
+  displayName("Build Game - Win64 - Git - Static VM")
 
   properties {
     disableConcurrentBuilds()
@@ -17,7 +17,7 @@ pipelineJob('docker/build_game_linux_git_docker') {
           branch('*/main')
         }
       }
-      scriptPath('build_game_linux_git_docker.groovy')
+      scriptPath('build_game_win64_git_static.groovy')
       // Obtain the Pipeline script contents directly from the SCM without performing a full checkout.
       lightweight()
     }
