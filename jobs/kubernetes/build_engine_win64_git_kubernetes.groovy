@@ -46,7 +46,7 @@ pipelineJob('k8s/b_e_w64_git_k8s') {
           }
         }
       }
-      scriptPath('build_engine_win64_git_kubernetes.groovy')
+      scriptPath('Jenkinsfiles/build_engine_win64_git_kubernetes.groovy')
       // Obtain the Pipeline script contents directly from the SCM without performing a full checkout.
       lightweight()
     }

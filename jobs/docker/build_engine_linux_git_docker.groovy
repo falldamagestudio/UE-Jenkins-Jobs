@@ -42,7 +42,7 @@ pipelineJob('docker/build_engine_linux_git_docker') {
           }
         }
       }
-      scriptPath('build_engine_linux_git_docker.groovy')
+      scriptPath('Jenkinsfiles/build_engine_linux_git_docker.groovy')
       // Obtain the Pipeline script contents directly from the SCM without performing a full checkout.
       lightweight()
     }
