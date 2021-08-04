@@ -11,7 +11,7 @@ pipelineJob('dynamic/build_engine_linux_git_dynamic') {
       scm {
         git {
           remote {
-            url('https://github.com/Kalmalyzer/UE-Jenkins-Engine')
+            url('https://github.com/falldamagestudio/UE-Jenkins-Engine')
             credentials('github-user')
           }
           branch('*/main')

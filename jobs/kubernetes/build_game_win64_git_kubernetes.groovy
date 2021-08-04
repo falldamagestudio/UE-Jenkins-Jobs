@@ -15,7 +15,7 @@ pipelineJob('k8s/b_g_w64_git_k8s') {
       scm {
         git {
           remote {
-            url('https://github.com/Kalmalyzer/UE-Jenkins-Game')
+            url('https://github.com/falldamagestudio/UE-Jenkins-Game')
             credentials('github-user')
           }
           branch('*/main')

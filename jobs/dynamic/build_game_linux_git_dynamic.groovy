@@ -11,7 +11,7 @@ pipelineJob('dynamic/build_game_linux_git_dynamic') {
       scm {
         git {
           remote {
-            url('https://github.com/Kalmalyzer/UE-Jenkins-Game')
+            url('https://github.com/falldamagestudio/UE-Jenkins-Game')
             credentials('github-user')
           }
           branch('*/main')
