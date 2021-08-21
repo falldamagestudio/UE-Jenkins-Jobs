@@ -27,7 +27,7 @@ pipelineJob('docker_static/build_game_win64_plastic_docker_static') {
           directory('')
         }
       }
-      scriptPath('Jenkinsfiles/build_game_win64_plastic_docker_static.groovy')
+      scriptPath('Jenkinsfiles/docker_static/build_game_win64_plastic_docker_static.groovy')
       // Obtain the Pipeline script contents directly from the SCM without performing a full checkout.
       lightweight()
     }
