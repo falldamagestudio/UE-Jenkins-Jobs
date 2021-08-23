@@ -42,7 +42,7 @@ pipelineJob('static/build_engine_linux_git_static') {
           }
         }
       }
-      scriptPath('Jenkinsfiles/build_engine_linux_git_static.groovy')
+      scriptPath('Jenkinsfiles/static/build_engine_linux_git_static.groovy')
       // Obtain the Pipeline script contents directly from the SCM without performing a full checkout.
       lightweight()
     }

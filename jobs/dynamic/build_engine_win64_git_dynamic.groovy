@@ -42,7 +42,7 @@ pipelineJob('dynamic/build_engine_win64_git_dynamic') {
           }
         }
       }
-      scriptPath('Jenkinsfiles/build_engine_win64_git_dynamic.groovy')
+      scriptPath('Jenkinsfiles/dynamic/build_engine_win64_git_dynamic.groovy')
       // Obtain the Pipeline script contents directly from the SCM without performing a full checkout.
       lightweight()
     }
