@@ -1,4 +1,4 @@
-listView('3. Docker - Dynamic VMs') {
+listView('1. Dynamic VMs') {
 
   columns {
     // Show status of latest build
@@ -22,6 +22,6 @@ listView('3. Docker - Dynamic VMs') {
 
   jobs {
     // Show only jobs whose names match the given regex
-    regex(/docker_dynamic_.+/)
+    regex(/dynamic_.+/)
   }
 }
