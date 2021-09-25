@@ -1,4 +1,4 @@
-pipelineJob('kubernetes_build_game_linux_git') {
+pipelineJob('k8s_build_game_linux_git') {
 
   displayName("Kubernetes - Build Game - Linux - Git")
 
