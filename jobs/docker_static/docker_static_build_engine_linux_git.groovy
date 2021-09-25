@@ -1,4 +1,4 @@
-pipelineJob('docker_static/docker_static_build_engine_linux_git') {
+pipelineJob('docker_static_build_engine_linux_git') {
 
   displayName("Docker - Static VM - Build Engine - Linux - Git")
 

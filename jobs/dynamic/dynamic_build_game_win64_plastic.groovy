@@ -1,4 +1,4 @@
-pipelineJob('dynamic/dynamic_build_game_win64_plastic') {
+pipelineJob('dynamic_build_game_win64_plastic') {
 
   displayName("Dynamic VM - Build Game - Win64 - Plastic")
 

@@ -1,4 +1,4 @@
-pipelineJob('docker_dynamic/docker_dynamic_build_engine_linux_git') {
+pipelineJob('docker_dynamic_build_engine_linux_git') {
 
   displayName("Docker - Dynamic VM - Build Engine - Linux - Git")
 

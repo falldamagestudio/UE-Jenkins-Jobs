@@ -1,4 +1,4 @@
-pipelineJob('static/static_build_engine_linux_git') {
+pipelineJob('static_build_engine_linux_git') {
 
   displayName("Static VM - Build Engine - Linux - Git")
 

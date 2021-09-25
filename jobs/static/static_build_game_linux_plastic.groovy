@@ -1,4 +1,4 @@
-pipelineJob('static/static_build_game_linux_plastic') {
+pipelineJob('static_build_game_linux_plastic') {
 
   displayName("Static VM - Build Game - Linux - Plastic")
 

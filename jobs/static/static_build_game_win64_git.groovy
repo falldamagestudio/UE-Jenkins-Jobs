@@ -1,4 +1,4 @@
-pipelineJob('static/static_build_game_win64_git') {
+pipelineJob('static_build_game_win64_git') {
 
   displayName("Static VM - Build Game - Win64 - Git")
 

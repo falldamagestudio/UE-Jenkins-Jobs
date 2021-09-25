@@ -1,4 +1,4 @@
-pipelineJob('docker_static/docker_static_build_game_win64_git') {
+pipelineJob('docker_static_build_game_win64_git') {
 
   displayName("Docker - Static VM - Build Game - Win64 - Git")
 

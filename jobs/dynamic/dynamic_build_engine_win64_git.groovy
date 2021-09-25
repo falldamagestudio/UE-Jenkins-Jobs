@@ -1,4 +1,4 @@
-pipelineJob('dynamic/dynamic_build_engine_win64_git') {
+pipelineJob('dynamic_build_engine_win64_git') {
 
   displayName("Dynamic VM - Build Engine - Win64 - Git")
 
