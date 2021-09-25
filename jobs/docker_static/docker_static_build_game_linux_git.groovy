@@ -1,6 +1,6 @@
-pipelineJob('dynamic/build_game_linux_git_dynamic') {
+pipelineJob('docker_static/docker_static_build_game_linux_git') {
 
-  displayName("Build Game - Linux - Git - Dynamic VM")
+  displayName("Docker - Static VM - Build Game - Linux - Git")
 
   properties {
     disableConcurrentBuilds()
@@ -17,7 +17,7 @@ pipelineJob('dynamic/build_game_linux_git_dynamic') {
           branch('*/main')
         }
       }
-      scriptPath('Jenkinsfiles/dynamic/build_game_linux_git_dynamic.groovy')
+      scriptPath('Jenkinsfiles/docker_static/docker_static_build_game_linux_git.groovy')
       // Obtain the Pipeline script contents directly from the SCM without performing a full checkout.
       lightweight()
     }

@@ -1,10 +1,6 @@
-// Choose a short name for this pipeline job
-// The Kubernetes plugin will put the job's workspace at
-// <agent workspace root>/workspace/<job name, including folders>
-// and Windows requires that folder paths be less than 248 chars / file paths be less than 260 chars
-pipelineJob('k8s/b_e_w64_git_k8s') {
+pipelineJob('static/static_build_engine_win64_git') {
 
-  displayName("Build Engine - Win64 - Git - Kubernetes")
+  displayName("Static VM - Build Engine - Win64 - Git")
 
   properties {
     disableConcurrentBuilds()
@@ -46,7 +42,7 @@ pipelineJob('k8s/b_e_w64_git_k8s') {
           }
         }
       }
-      scriptPath('Jenkinsfiles/kubernetes/build_engine_win64_git_kubernetes.groovy')
+      scriptPath('Jenkinsfiles/static/static_build_engine_win64_git.groovy')
       // Obtain the Pipeline script contents directly from the SCM without performing a full checkout.
       lightweight()
     }

@@ -1,6 +1,6 @@
-pipelineJob('docker_dynamic/build_game_linux_plastic_docker_dynamic') {
+pipelineJob('docker_dynamic/docker_dynamic_build_game_linux_plastic') {
 
-  displayName("Build Game - Linux - Plastic - Docker - Dynamic VM")
+  displayName("Docker - Dynamic VM - Build Game - Linux - Plastic")
 
   properties {
     disableConcurrentBuilds()
@@ -27,7 +27,7 @@ pipelineJob('docker_dynamic/build_game_linux_plastic_docker_dynamic') {
           directory('')
         }
       }
-      scriptPath('Jenkinsfiles/docker_dynamic/build_game_linux_plastic_docker_dynamic.groovy')
+      scriptPath('Jenkinsfiles/docker_dynamic/docker_dynamic_build_game_linux_plastic.groovy')
       // Obtain the Pipeline script contents directly from the SCM without performing a full checkout.
       lightweight()
     }

@@ -1,6 +1,6 @@
-pipelineJob('static/build_game_win64_plastic_static') {
+pipelineJob('dynamic/dynamic_build_game_linux_plastic') {
 
-  displayName("Build Game - Win64 - Plastic - Static VM")
+  displayName("Dynamic VM - Build Game - Linux - Plastic")
 
   properties {
     disableConcurrentBuilds()
@@ -27,7 +27,7 @@ pipelineJob('static/build_game_win64_plastic_static') {
           directory('')
         }
       }
-      scriptPath('Jenkinsfiles/static/build_game_win64_plastic_static.groovy')
+      scriptPath('Jenkinsfiles/dynamic/dynamic_build_game_linux_plastic.groovy')
       // Obtain the Pipeline script contents directly from the SCM without performing a full checkout.
       lightweight()
     }

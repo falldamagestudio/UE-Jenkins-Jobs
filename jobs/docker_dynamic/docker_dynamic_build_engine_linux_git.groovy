@@ -1,6 +1,6 @@
-pipelineJob('static/build_engine_linux_git_static') {
+pipelineJob('docker_dynamic/docker_dynamic_build_engine_linux_git') {
 
-  displayName("Build Engine - Linux - Git - Static VM")
+  displayName("Docker - Dynamic VM - Build Engine - Linux - Git")
 
   properties {
     disableConcurrentBuilds()
@@ -42,7 +42,7 @@ pipelineJob('static/build_engine_linux_git_static') {
           }
         }
       }
-      scriptPath('Jenkinsfiles/static/build_engine_linux_git_static.groovy')
+      scriptPath('Jenkinsfiles/docker_dynamic/docker_dynamic_build_engine_linux_git.groovy')
       // Obtain the Pipeline script contents directly from the SCM without performing a full checkout.
       lightweight()
     }

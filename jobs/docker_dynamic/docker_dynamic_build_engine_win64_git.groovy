@@ -1,6 +1,6 @@
-pipelineJob('k8s/build_game_linux_git_kubernetes') {
+pipelineJob('docker_dynamic/docker_dynamic_build_engine_win64_git') {
 
-  displayName("Build Game - Linux - Git - Kubernetes")
+  displayName("Docker - Dynamic VM - Build Engine - Win64 - Git")
 
   properties {
     disableConcurrentBuilds()
@@ -11,7 +11,7 @@ pipelineJob('k8s/build_game_linux_git_kubernetes') {
       scm {
         git {
           remote {
-            url('https://github.com/falldamagestudio/UE-Jenkins-Game')
+            url('https://github.com/falldamagestudio/UE-Jenkins-Engine')
             credentials('github-user')
           }
           branch('*/main')
@@ -36,13 +36,13 @@ pipelineJob('k8s/build_game_linux_git_kubernetes') {
               trackingSubmodules(false)
               // No reference path
               reference('')
-              // Initial clone of game repo is expected to be reasonably quick
-              timeout(10)
+              // Initial clone of UE repo is allowed to take a long time - it's a large repo!
+              timeout(60)
             }
           }
         }
       }
-      scriptPath('Jenkinsfiles/kubernetes/build_game_linux_git_kubernetes.groovy')
+      scriptPath('Jenkinsfiles/docker_dynamic/docker_dynamic_build_engine_win64_git.groovy')
       // Obtain the Pipeline script contents directly from the SCM without performing a full checkout.
       lightweight()
     }

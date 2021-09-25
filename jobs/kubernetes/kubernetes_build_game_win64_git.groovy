@@ -1,6 +1,10 @@
-pipelineJob('static/build_engine_win64_git_static') {
+// Choose a short name for this pipeline job
+// The Kubernetes plugin will put the job's workspace at
+// <agent workspace root>/workspace/<job name, including folders>
+// and Windows requires that folder paths be less than 248 chars / file paths be less than 260 chars
+pipelineJob('k8s/k8s_b_g_w64_git') {
 
-  displayName("Build Engine - Win64 - Git - Static VM")
+  displayName("Kubernetes - Build Game - Win64 - Git")
 
   properties {
     disableConcurrentBuilds()
@@ -11,7 +15,7 @@ pipelineJob('static/build_engine_win64_git_static') {
       scm {
         git {
           remote {
-            url('https://github.com/falldamagestudio/UE-Jenkins-Engine')
+            url('https://github.com/falldamagestudio/UE-Jenkins-Game')
             credentials('github-user')
           }
           branch('*/main')
@@ -36,13 +40,13 @@ pipelineJob('static/build_engine_win64_git_static') {
               trackingSubmodules(false)
               // No reference path
               reference('')
-              // Initial clone of UE repo is allowed to take a long time - it's a large repo!
-              timeout(60)
+              // Initial clone of game repo is expected to be reasonably quick
+              timeout(10)
             }
           }
         }
       }
-      scriptPath('Jenkinsfiles/static/build_engine_win64_git_static.groovy')
+      scriptPath('Jenkinsfiles/kubernetes/kubernetes_build_game_win64_git.groovy')
       // Obtain the Pipeline script contents directly from the SCM without performing a full checkout.
       lightweight()
     }

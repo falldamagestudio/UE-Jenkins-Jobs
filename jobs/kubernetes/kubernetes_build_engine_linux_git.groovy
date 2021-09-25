@@ -1,6 +1,6 @@
-pipelineJob('k8s/build_engine_linux_git_kubernetes') {
+pipelineJob('k8s/kubernetes_build_engine_linux_git') {
 
-  displayName("Build Engine - Linux - Git - Kubernetes")
+  displayName("Kubernetes - Build Engine - Linux - Git")
 
   properties {
     disableConcurrentBuilds()
@@ -42,7 +42,7 @@ pipelineJob('k8s/build_engine_linux_git_kubernetes') {
           }
         }
       }
-      scriptPath('Jenkinsfiles/kubernetes/build_engine_linux_git_kubernetes.groovy')
+      scriptPath('Jenkinsfiles/kubernetes/kubernetes_build_engine_linux_git.groovy')
       // Obtain the Pipeline script contents directly from the SCM without performing a full checkout.
       lightweight()
     }
